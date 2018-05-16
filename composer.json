@@ -1,0 +1,31 @@
+{
+    "name": "elephantsgroup/eg-service-relation",
+    "description": "Yii 2 service relation management module",
+    "keywords": ["yii", "yii2", "service-relation", "elephantsgroup"],
+    "homepage": "http://elephantsgroup.com",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jalal Jaberi",
+            "email": "j_jaberi@yahoo.com"
+        },
+        {
+            "name": "Arezou Zahedi Majd",
+            "email": "a_majd_8@yahoo.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "elephantsgroup/yii2-base": "~1",
+        "elephantsgroup/yii2-jdf": "*",
+		"elephantsgroup/yii2-jdate": "*"
+    },
+    "config": {
+        "process-timeout": 1500,
+        "secure-http": false
+    },
+    "autoload": {
+        "psr-4": { "elephantsGroup\\serviceRelation\\": "" }
+    }
+}

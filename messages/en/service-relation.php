@@ -1,0 +1,33 @@
+<?php
+return
+[
+    'ID' => 'ID',
+	'Creation Time' => 'Creation Time',
+	'Update Time' => 'Update Time',
+	'Views' => 'Views',
+	'Status' => 'Status',
+	'Name' => 'Name',
+	'Service1 ID' => '',
+	'Service2 ID' => '',
+	'Language' => 'Language',
+	'Title' => 'Title',
+	'Item1 ID' => '',
+	'Item2 ID' => '',
+	'Persian' => 'Persian',
+	'English' => 'English',
+	'Undefined' => 'Undefined',
+	'Active' => 'Active',
+	'Inactive' => 'Inactive',
+	'Create' => 'Create',
+	'Update' => 'Update',
+	'Edit' => 'Edit',
+	'Are you sure you want to delete this item?' => 'Are you sure you want to delete this item?',
+	'Delete' => 'Delete',
+	'Global' => '',
+	'Is Parent of' => '',
+	'Service Relations' => '',
+	'Create Service Relation' => '',
+	'Event' => 'Event',
+	'News' => 'News',
+	'Gallery' => 'Gallery'
+];
