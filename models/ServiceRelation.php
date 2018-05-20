@@ -81,6 +81,16 @@ class ServiceRelation extends \yii\db\ActiveRecord
         ];
     }
 
+	public function beforeSave($insert)
+	{
+		$date = new \DateTime();
+		$date->setTimestamp(time());
+		$date->setTimezone(new \DateTimezone('Iran'));
+		if($this->isNewRecord)
+			$this->creation_time = $date->format('Y-m-d H:i:s');
+		return parent::beforeSave($insert);
+	}
+
     /**
      * @inheritdoc
      * @return ServiceRelationQuery the active query used by this AR class.
