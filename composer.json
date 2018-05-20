@@ -17,9 +17,9 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "elephantsgroup/yii2-base": "~1",
-        "elephantsgroup/yii2-jdf": "*",
-		"elephantsgroup/yii2-jdate": "*"
+        "elephantsgroup/eg-base": "~1",
+        "elephantsgroup/eg-jdf": "~1",
+		"elephantsgroup/eg-jdate": "~1"
     },
     "config": {
         "process-timeout": 1500,
