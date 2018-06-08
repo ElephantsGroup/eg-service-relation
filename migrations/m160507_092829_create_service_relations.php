@@ -18,66 +18,10 @@ class m160507_092829_create_service_relations extends Migration
             'update_time' => $this->timestamp()->notNull(),
             'creation_time' => $this->timestamp()->notNull(),
         ]);
-
-        $this->insert('{{%auth_item}}', [
-            'name' => '/service-relation/admin/*',
-            'type' => 2,
-            'created_at' => 1467629406,
-            'updated_at' => 1467629406
-        ]);
-        $this->insert('{{%auth_item}}', [
-            'name' => 'service_relation_management',
-            'type' => 2,
-            'created_at' => 1467629406,
-            'updated_at' => 1467629406
-        ]);
-        $this->insert('{{%auth_item_child}}', [
-            'parent' => 'service_relation_management',
-            'child' => '/service-relation/admin/*',
-        ]);
-        $this->insert('{{%auth_item}}', [
-            'name' => 'service_relation_manager',
-            'type' => 1,
-            'created_at' => 1467629406,
-            'updated_at' => 1467629406
-        ]);
-        $this->insert('{{%auth_item_child}}', [
-            'parent' => 'service_relation_manager',
-            'child' => 'service_relation_management',
-        ]);
-        $this->insert('{{%auth_item_child}}', [
-            'parent' => 'super_admin',
-            'child' => 'service_relation_manager',
-        ]);
     }
 
     public function safeDown()
     {
-        $this->delete('{{%auth_item_child}}', [
-            'parent' => 'super_admin',
-            'child' => 'service_relation_manager',
-        ]);
-        $this->delete('{{%auth_item_child}}', [
-            'parent' => 'service_relation_manager',
-            'child' => 'service_relation_management',
-        ]);
-        $this->delete('{{%auth_item}}', [
-            'name' => 'service_relation_manager',
-            'type' => 1,
-        ]);
-        $this->delete('{{%auth_item_child}}', [
-            'parent' => 'service_relation_management',
-            'child' => '/service-relation/admin/*',
-        ]);
-        $this->delete('{{%auth_item}}', [
-            'name' => 'service_relation_management',
-            'type' => 2,
-        ]);
-        $this->delete('{{%auth_item}}', [
-            'name' => '/service-relation/admin/*',
-            'type' => 2,
-        ]);
-
         $this->dropTable('{{%service_relation}}');
     }
 }
